@@ -2,9 +2,10 @@ import Image from 'next/image'
 
 async function saveAction(formData: FormData) {
 	'use server'
-	const fullName = formData.get('fullName')
-	console.log('form submitted')
-	console.log('Full Name:', fullName)
+	const name = formData.get('name')
+	const email = formData.get('email')
+	console.log('name:', name)
+	console.log('email:', email)
 }
 
 export default function Home() {
@@ -32,7 +33,7 @@ export default function Home() {
 							<input
 								type="text"
 								name="email"
-								placeholder="Enter your email"
+								placeholder="your@email.com"
 								className="border-2 border-slate-300 p-2 rounded-md block"
 							/>
 						</div>
