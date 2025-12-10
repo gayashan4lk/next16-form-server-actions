@@ -26,8 +26,12 @@ export async function createAddress(prevState: ActionResponse | null, formData: 
 			country: formData.get('country') as string,
 		}
 
+		console.log('rawData', rawData)
+
 		// Validate the form data
 		const validatedData = addressSchema.safeParse(rawData)
+
+		console.log('validatedData', validatedData)
 
 		if (!validatedData.success) {
 			return {

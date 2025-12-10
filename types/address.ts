@@ -10,8 +10,10 @@ export interface AddressFormData {
 export interface ActionResponse {
 	success: boolean
 	message: string
-	// errors?: {
-	// 	[K in keyof AddressFormData]?: string[]
-	// }
-	errors?: any
+	errors?: {
+		formErrors: string[]
+		fieldErrors: {
+			[K in keyof AddressFormData]?: string[]
+		}
+	}
 }
