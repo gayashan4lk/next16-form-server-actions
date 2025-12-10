@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 async function saveAction(formData: FormData) {
 	'use server'
 	const name = formData.get('name')
