@@ -111,9 +111,12 @@ export default function UltimateForm() {
 						</div>
 					</div>
 					{state?.message && (
-						<Alert variant={state.success ? 'default' : 'destructive'}>
+						<Alert
+							variant={state.success ? 'default' : 'destructive'}
+							className={state.success ? 'border-0 bg-green-500 text-green-900' : ''}
+						>
 							{state.success && <CheckCircle2 className="h-4 w-4" />}
-							<AlertDescription>{state.message}</AlertDescription>
+							<AlertDescription className={state.success ? 'text-green-900' : ''}>{state.message}</AlertDescription>
 						</Alert>
 					)}
 					<Button type="submit" className="w-full" disabled={isPending}>
