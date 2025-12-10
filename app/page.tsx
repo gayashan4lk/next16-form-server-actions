@@ -1,5 +1,6 @@
 import BasicForm from '@/components/custom/BasicForm'
 import IntermediateForm from '@/components/custom/IntermediateForm'
+import UltimateForm from '@/components/custom/UltimateForm'
 
 export default function Home() {
 	return (
@@ -14,10 +15,16 @@ export default function Home() {
 						<BasicForm />
 					</div>
 
-					{/* Basic Form */}
+					{/* Intermediate Form */}
 					<div className="rounded-md border border-slate-500 p-4">
 						<h2 className="mb-2 text-2xl font-semibold">Intermediate Form</h2>
 						<IntermediateForm />
+					</div>
+
+					{/* Ultimate Form */}
+					<div className="rounded-md border border-slate-500 p-4">
+						<h2 className="mb-2 text-2xl font-semibold">Ultimate Form</h2>
+						<UltimateForm />
 					</div>
 				</div>
 			</main>
