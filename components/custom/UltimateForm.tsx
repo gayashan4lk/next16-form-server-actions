@@ -18,7 +18,7 @@ const initialState: ActionResponse = {
 export default function UltimateForm() {
 	const [state, action, isPending] = useActionState(createAddress, initialState)
 
-	console.log('errors:', state?.errors)
+	const fieldErrors = state?.errors?.fieldErrors || {}
 
 	return (
 		<Card className="w-full">
@@ -35,11 +35,11 @@ export default function UltimateForm() {
 								id="streetAddress"
 								name="streetAddress"
 								placeholder="123, Main Street"
-								className={state?.errors?.streetAddress ? 'border-red-500' : ''}
+								className={fieldErrors?.streetAddress ? 'border-red-500' : ''}
 							/>
-							{state?.errors?.streetAddress && (
+							{fieldErrors?.streetAddress && (
 								<p id="streetAddress-error" className="text-sm text-red-500">
-									{state.errors.streetAddress[0]}
+									{fieldErrors.streetAddress[0]}
 								</p>
 							)}
 						</div>
@@ -54,11 +54,11 @@ export default function UltimateForm() {
 									id="city"
 									name="city"
 									placeholder="New York"
-									className={state?.errors?.city ? 'border-red-500' : ''}
+									className={fieldErrors?.city ? 'border-red-500' : ''}
 								/>
-								{state?.errors?.city && (
+								{fieldErrors?.city && (
 									<p id="city-error" className="text-sm text-red-500">
-										{state.errors.city[0]}
+										{fieldErrors.city[0]}
 									</p>
 								)}
 							</div>
@@ -69,11 +69,11 @@ export default function UltimateForm() {
 									id="state"
 									name="state"
 									placeholder="NY"
-									className={state?.errors?.state ? 'border-red-500' : ''}
+									className={fieldErrors?.state ? 'border-red-500' : ''}
 								/>
-								{state?.errors?.state && (
+								{fieldErrors?.state && (
 									<p id="state-error" className="text-sm text-red-500">
-										{state.errors.state[0]}
+										{fieldErrors.state[0]}
 									</p>
 								)}
 							</div>
@@ -85,11 +85,11 @@ export default function UltimateForm() {
 									id="zipCode"
 									name="zipCode"
 									placeholder="10001"
-									className={state?.errors?.zipCode ? 'border-red-500' : ''}
+									className={fieldErrors?.zipCode ? 'border-red-500' : ''}
 								/>
-								{state?.errors?.zipCode && (
+								{fieldErrors?.zipCode && (
 									<p id="zipCode-error" className="text-sm text-red-500">
-										{state.errors.zipCode[0]}
+										{fieldErrors.zipCode[0]}
 									</p>
 								)}
 							</div>
@@ -100,11 +100,11 @@ export default function UltimateForm() {
 									id="country"
 									name="country"
 									placeholder="United States"
-									className={state?.errors?.country ? 'border-red-500' : ''}
+									className={fieldErrors?.country ? 'border-red-500' : ''}
 								/>
-								{state?.errors?.country && (
+								{fieldErrors?.country && (
 									<p id="country-error" className="text-sm text-red-500">
-										{state.errors.country[0]}
+										{fieldErrors.country[0]}
 									</p>
 								)}
 							</div>
