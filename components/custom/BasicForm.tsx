@@ -18,7 +18,7 @@ export default function BasicForm() {
 						type="text"
 						name="name"
 						placeholder="Enter your name"
-						className="border-2 border-slate-300 p-2 rounded-md block w-full"
+						className="block w-full rounded-md border-2 border-slate-300 p-2"
 					/>
 				</div>
 				<div className="space-y-1">
@@ -29,10 +29,10 @@ export default function BasicForm() {
 						type="text"
 						name="email"
 						placeholder="your@email.com"
-						className="border-2 border-slate-300 p-2 rounded-md block w-full"
+						className="block w-full rounded-md border-2 border-slate-300 p-2"
 					/>
 				</div>
-				<button type="submit" className="bg-sky-500 text-white font-bold cursor-pointer p-2 rounded-md px-4">
+				<button type="submit" className="cursor-pointer rounded-md bg-sky-500 p-2 px-4 font-bold text-white">
 					Submit
 				</button>
 			</div>

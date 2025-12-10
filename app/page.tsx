@@ -4,11 +4,11 @@ export default function Home() {
 	return (
 		<div>
 			<main className="mx-auto max-w-3xl">
-				<h1 className="text-4xl font-semibold mb-6">Next.js 16 - form - server actions</h1>
+				<h1 className="mb-6 text-4xl font-semibold">Next.js 16 - form - server actions</h1>
 
 				{/* Basic Form */}
-				<div className="border-slate-500 border rounded-md p-4">
-					<h2 className="text-2xl font-semibold mb-2 ">Basic Form</h2>
+				<div className="rounded-md border border-slate-500 p-4">
+					<h2 className="mb-2 text-2xl font-semibold">Basic Form</h2>
 					<BasicForm />
 				</div>
 			</main>
