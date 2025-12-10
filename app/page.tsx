@@ -36,7 +36,7 @@ export default function Home() {
 								className="border-2 border-slate-300 p-2 rounded-md block"
 							/>
 						</div>
-						<button type="submit" className="bg-sky-500 text-white font-semibold cursor-pointer p-2 rounded-md px-4">
+						<button type="submit" className="bg-sky-500 text-white font-bold cursor-pointer p-2 rounded-md px-4">
 							Submit
 						</button>
 					</div>
